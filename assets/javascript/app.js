@@ -18,7 +18,7 @@ var trainTime = ""
 var frequency = ""
 
 
-$("#button").on("click", function (e) {
+$("#submit-button").on("click", function (e) {
   e.preventDefault();
 
   var trainName = $("#trainName").val().trim();
@@ -52,9 +52,9 @@ database.ref().on("child_added", function(data){
         "<td>" + data.val().trainName + "</td>" +
         "<td>" + data.val().destination + "</td>" + 
         "<td>" + data.val().frequency + "</td>" + "<td>" + tNext + "</td>" + "<td>" + timeLeft + "</td>" );
-    $("#tbody").append(createRow)
+    $("#tableBody").append(createRow)
 
-}); 
+});
 
 
 
